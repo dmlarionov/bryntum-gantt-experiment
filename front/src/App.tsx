@@ -20,7 +20,7 @@ const App: FunctionComponent = () => {
     }
 
     return (
-        <main>
+        <main id="container">
             <p>
                 <button onClick={sync}>Save to backend</button>
             </p>

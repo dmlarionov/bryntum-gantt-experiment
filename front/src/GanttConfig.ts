@@ -9,7 +9,7 @@ const ganttConfig: Partial<GanttConfig> = {
         //     statusDate : new Date(2022, 4, 3)
         // }
     // },
-
+    
     columns : [
         { type : 'name', field : 'name', width : 250 }
     ],

@@ -1,7 +1,7 @@
 {
   "project": {
     "calendar": "general",
-    "startDate": "2022-03-14",
+    "startDate": "2023-10-16",
     "hoursPerDay": 24,
     "daysPerWeek": 5,
     "daysPerMonth": 20,
@@ -56,9 +56,31 @@
     "rows": [
       {
         "id": 1000,
-        "name": "Build The Rocket",
+        "name": "No Timezone Task",
         "percentDone": 50,
-        "startDate": "2023-10-16",
+        "startDate": "2023-10-17",
+        "constraintType":"startnoearlierthan",
+        "constraintDate":"2023-10-17",
+        "duration": 3,
+        "durationUnit": "day"
+      },
+      {
+        "id": 2000,
+        "name": "GMT Task",
+        "percentDone": 50,
+        "startDate": "2023-10-17T00:00:00.000Z",
+        "constraintType":"startnoearlierthan",
+        "constraintDate":"2023-10-17T00:00:00.000Z",
+        "duration": 3,
+        "durationUnit": "day"
+      },
+      {
+        "id": 3000,
+        "name": "Yekaterinburg Task",
+        "percentDone": 50,
+        "startDate": "2023-10-17T00:00:00.000+05:00",
+        "constraintType":"startnoearlierthan",
+        "constraintDate":"2023-10-17T00:00:00.000+05:00",
         "duration": 3,
         "durationUnit": "day"
       }
