@@ -19,11 +19,11 @@ const ganttConfig: Partial<GanttConfig> = {
     project : {
         transport : {
             load : {
-                url: 'http://localhost:3025/projects/2/load'
+                url: 'http://localhost:3025/projects/3/load'
                 // url : 'data/gantt-data.json'
             },
             sync : {
-                url: 'http://localhost:3025/projects/2/sync',
+                url: 'http://localhost:3025/projects/3/sync',
                 headers : {
                     'Content-Type' : 'application/json'
                 },
