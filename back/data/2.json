@@ -1,0 +1,67 @@
+{
+  "project": {
+    "calendar": "general",
+    "startDate": "2022-03-14",
+    "hoursPerDay": 24,
+    "daysPerWeek": 5,
+    "daysPerMonth": 20,
+    "timeZone": "Europe/Stockholm"
+  },
+  "calendars": {
+    "rows": [
+      {
+        "id": "general",
+        "name": "General",
+        "intervals": [
+          {
+            "recurrentStartDate": "on Sat at 0:00",
+            "recurrentEndDate": "on Mon at 0:00",
+            "isWorking": false
+          }
+        ],
+        "expanded": true,
+        "children": [
+          {
+            "id": "business",
+            "name": "Business",
+            "intervals": [
+              {
+                "recurrentStartDate": "every weekday at 12:00",
+                "recurrentEndDate": "every weekday at 13:00",
+                "isWorking": false
+              },
+              {
+                "recurrentStartDate": "every weekday at 17:00",
+                "recurrentEndDate": "every weekday at 08:00",
+                "isWorking": false
+              }
+            ]
+          },
+          {
+            "id": "night",
+            "name": "Night shift",
+            "intervals": [
+              {
+                "recurrentStartDate": "every weekday at 6:00",
+                "recurrentEndDate": "every weekday at 22:00",
+                "isWorking": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tasks": {
+    "rows": [
+      {
+        "id": 1000,
+        "name": "Build The Rocket",
+        "percentDone": 50,
+        "startDate": "2023-10-16",
+        "duration": 3,
+        "durationUnit": "day"
+      }
+    ]
+  }
+}
