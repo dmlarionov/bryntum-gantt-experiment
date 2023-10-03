@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "(cd back && npm run start) & (cd front && npm run start)"
+    "start": "(cd backend && npm run start) & (cd frontend && npm run start)"
   }
 }
