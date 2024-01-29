@@ -6,17 +6,19 @@
 @import '~@bryntum/gantt/gantt.stockholm.css';
 // @import '~@bryntum/gantt/gantt.material.css';
 
+/* import react bootstrap */
+@import '~bootstrap/scss/bootstrap';
 
-body,
-html {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: Poppins, "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-}
-#container {
-    // flex: 1 1 100%;
-    height: 85%;
-}
+// body,
+// html {
+//     margin: 0;
+//     display: flex;
+//     flex-direction: column;
+//     height: 100vh;
+//     font-family: Poppins, "Open Sans", Helvetica, Arial, sans-serif;
+//     font-size: 14px;
+// }
+// #container {
+//     // flex: 1 1 100%;
+//     height: 85%;
+// }

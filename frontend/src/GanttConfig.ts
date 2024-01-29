@@ -4,18 +4,31 @@
 import { GanttConfig } from '@bryntum/gantt';
 
 const ganttConfig: Partial<GanttConfig> = {
-    // features: {
+    features: {
         // progressLine : {
-        //     statusDate : new Date(2022, 4, 3)
+        //     // statusDate : new Date()
+        // },
+        // labels: {
+        //     // Label rendered above the event bar with content from the
+        //     // record's location field
+        //     top: {
+        //         field: 'name',
+        //         editor: {
+        //             type: 'textfield'
+        //         }
+        //     }
         // }
-    // },
+        // pan: true,
+        timeRanges : {
+            showCurrentTimeLine : true,
+        }
+    },
     
     columns : [
         { type : 'name', field : 'name', width : 250 }
     ],
     viewPreset : 'weekAndDayLetter',
-    barMargin  : 10,
-
+    barMargin: 10,
     project : {
         transport : {
             load : {
