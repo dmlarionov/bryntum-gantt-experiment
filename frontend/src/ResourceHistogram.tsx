@@ -14,11 +14,14 @@ export const ResourceHistogram: FunctionComponent<Omit<BryntumResourceHistogramP
     }
   }
 
+  const startDate = new Date(2023, 10, 16); //(props.project as ProjectModel).startDate;
+
   return (
     <BryntumResourceHistogram
       ref={ref}
       columns={columns}
       tbar={tbar}
+      startDate={startDate}
       {...props}
     />
   )
