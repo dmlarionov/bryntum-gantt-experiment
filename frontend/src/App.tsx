@@ -8,6 +8,7 @@ import { projectModelConfig } from './Config';
 import './App.scss';
 import Gantt from './Gantt';
 import ResourceHistogram from './ResourceHistogram';
+import ResourceUtilization from './ResourceUtilization';
 
 const App: FunctionComponent = () => {
   const bryntumHeight = 1200;
@@ -51,8 +52,14 @@ const App: FunctionComponent = () => {
                 project={projectRef.current}
               />
             </Tab>
-            <Tab eventKey="resources" title="Ресурсы">
+            <Tab eventKey="resourceHistogram" title="Гистограмма ресурсов">
               <ResourceHistogram
+                height={bryntumHeight}
+                project={projectRef.current}
+              />
+            </Tab>
+            <Tab eventKey="resourceUtilization" title="Утилизация ресурсов">
+              <ResourceUtilization
                 height={bryntumHeight}
                 project={projectRef.current}
               />
