@@ -21,7 +21,8 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     // pan: true,
     timeRanges : {
         showCurrentTimeLine : true,
-    }
+    },
+    filter: true
   }
   const columns: Partial<GridColumnConfig>[] = [
     { type: 'name', field: 'name', width: 250 },
