@@ -57,7 +57,6 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
               weight: 10,
               label: 'Заказ SAP ТОРО',
               // Name of the field matches data field name, so value is loaded/saved automatically.
-              // In this case it is equal to the Task "name" field.
               name: 'sapToroOrder'
             },
             sapToroOperation: {
