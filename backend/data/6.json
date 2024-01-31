@@ -59,7 +59,8 @@
         "name": "Остановка",
         "percentDone": 50,
         "duration": 3,
-        "durationUnit": "day"
+        "durationUnit": "day",
+        "sapToroNumber": "123456/0987"
       },
       {
         "id": "01HBRHXPVGBVD4FY2CYWQX84R8",

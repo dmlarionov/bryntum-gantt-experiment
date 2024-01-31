@@ -2,6 +2,7 @@
  * Application configuration
  */
 import { ProjectModelConfig } from '@bryntum/gantt';
+import { DsrTaskModel } from './models/DsrTaskModel';
 
 const projectModelConfig: Partial<ProjectModelConfig> = {
   transport : {
@@ -18,7 +19,8 @@ const projectModelConfig: Partial<ProjectModelConfig> = {
     }
   },
   skipSuccessProperty: true,
-  autoLoad : true
+  autoLoad: true,
+  taskModelClass: DsrTaskModel
 };
 
 export { projectModelConfig };

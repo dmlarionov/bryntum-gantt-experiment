@@ -24,7 +24,8 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     }
   }
   const columns: Partial<GridColumnConfig>[] = [
-    { type: 'name', field: 'name', width: 250 }
+    { type: 'name', field: 'name', width: 250 },
+    { type: 'column', field: 'sapToroNumber', text: 'Заказ / Операция SAP TORO', width: 250 }
   ]
 
   return (

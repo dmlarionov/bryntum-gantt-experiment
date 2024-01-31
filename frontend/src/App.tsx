@@ -6,9 +6,9 @@ import { ProjectModel } from '@bryntum/gantt';
 import { Button, Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
 import { projectModelConfig } from './Config';
 import './App.scss';
-import Gantt from './Gantt';
-import ResourceHistogram from './ResourceHistogram';
-import ResourceUtilization from './ResourceUtilization';
+import Gantt from './components/Gantt';
+import ResourceHistogram from './components/ResourceHistogram';
+import ResourceUtilization from './components/ResourceUtilization';
 
 const App: FunctionComponent = () => {
   const bryntumHeight = 1200;
