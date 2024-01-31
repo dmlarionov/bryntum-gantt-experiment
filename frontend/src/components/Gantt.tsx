@@ -23,6 +23,7 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     timeRanges : {
         showCurrentTimeLine : true,
     },
+    // treeGroup: true,
     filter: true,
     taskMenu: {
       items: {
@@ -47,8 +48,9 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     }
   }
   const columns: Partial<GridColumnConfig>[] = [
-    { type: 'name', field: 'name', width: 250 },
-    { type: 'column', field: 'sapToroNumber', text: 'Заказ / Операция SAP TORO', width: 250 }
+    { type: 'name', field: 'name', text: 'Наименование', width: 250 },
+    { type: 'column', field: 'sapToroOrder', text: 'Заказ SAP TORO', width: 250 },
+    { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250 },
   ]
 
   return (
