@@ -2,7 +2,8 @@
  * Main Application script
  */
 import React, { FunctionComponent, useRef } from 'react';
-import { ProjectModel } from '@bryntum/gantt';
+import { ProjectModel, LocaleManager } from '@bryntum/gantt';
+import '@bryntum/gantt/locales/gantt.locale.Ru';  // TODO: вынести в собственный файл локализации
 import { Button, Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
 import { projectModelConfig } from './Config';
 import './App.scss';
@@ -11,6 +12,9 @@ import ResourceHistogram from './components/ResourceHistogram';
 import ResourceUtilization from './components/ResourceUtilization';
 
 const App: FunctionComponent = () => {
+  // Localize
+  LocaleManager.applyLocale("Ru");
+
   const bryntumHeight = 1200;
   const projectRef = useRef<ProjectModel>(new ProjectModel(projectModelConfig));
   // const projectRef = useRef<ProjectModel>(new ProjectModel({
