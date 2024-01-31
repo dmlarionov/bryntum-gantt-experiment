@@ -5,7 +5,7 @@ import { GridColumnConfig, ToolbarConfig } from "@bryntum/gantt";
 export const ResourceHistogram: FunctionComponent<Omit<BryntumResourceHistogramProps, "columns">> = (props) => {
   const ref = useRef<BryntumResourceHistogram>(null);
   const columns: Partial<GridColumnConfig>[] = [
-    { type: 'name', field: 'name', width: 250 }
+    { type: 'name', field: 'name', text: 'Ресурс', width: 250 }
   ]
   const tbar: Partial<ToolbarConfig> = {
     items    : {
