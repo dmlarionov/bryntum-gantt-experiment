@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useRef } from "react";
 import { BryntumGantt, BryntumGanttProps } from "@bryntum/gantt-react";
 import { GanttFeaturesConfigType, GridColumnConfig } from "@bryntum/gantt";
+import { DsrTaskModel } from '../models/DsrTaskModel';
 
 const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = (props) => {
   const ref = useRef<BryntumGantt>(null);
@@ -22,7 +23,28 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     timeRanges : {
         showCurrentTimeLine : true,
     },
-    filter: true
+    filter: true,
+    taskMenu: {
+      items: {
+        // Custom reference to the new menu item
+        moveOneDayForward : {
+          text: 'Сдвинуть на 1 день вперёд',
+          icon: 'b-fa b-fa-forward',
+          weight : 90, // Add the item to the top
+          onItem: (event) => {
+            (event.record as DsrTaskModel).shift('day', 1);
+          }
+        },
+        moveOneDayBackward : {
+          text: 'Сдвинуть на 1 день назад',
+          icon: 'b-fa b-fa-backward',
+          weight : 95, // Add the item to the top
+          onItem: (event) => {
+            (event.record as DsrTaskModel).shift('day', -1);
+          }
+        }
+      }
+    }
   }
   const columns: Partial<GridColumnConfig>[] = [
     { type: 'name', field: 'name', width: 250 },

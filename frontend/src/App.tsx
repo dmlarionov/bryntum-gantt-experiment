@@ -15,7 +15,7 @@ const App: FunctionComponent = () => {
   // Localize
   LocaleManager.applyLocale("Ru");
 
-  const bryntumHeight = 1200;
+  // Initialize project
   const projectRef = useRef<ProjectModel>(new ProjectModel(projectModelConfig));
   // const projectRef = useRef<ProjectModel>(new ProjectModel({
   //   startDate  : '2017-01-01',
@@ -40,6 +40,8 @@ const App: FunctionComponent = () => {
     } 
   }
 
+  // const bryntumHeight = 1200;
+
   return (
     <>
       <Container fluid className='g-0' style={{ overflowX: 'clip' }}>
@@ -52,19 +54,22 @@ const App: FunctionComponent = () => {
           <Tabs defaultActiveKey="gantt" id="tabs" className="mb-3">
             <Tab eventKey="gantt" title="Гант">
               <Gantt
-                height={bryntumHeight}
+                // height={bryntumHeight}
+                autoHeight={true}
                 project={projectRef.current}
               />
             </Tab>
             <Tab eventKey="resourceHistogram" title="Гистограмма ресурсов">
               <ResourceHistogram
-                height={bryntumHeight}
+                // height={bryntumHeight}
+                autoHeight={true}
                 project={projectRef.current}
               />
             </Tab>
             <Tab eventKey="resourceUtilization" title="Утилизация ресурсов">
               <ResourceUtilization
-                height={bryntumHeight}
+                // height={bryntumHeight}
+                autoHeight={true}
                 project={projectRef.current}
               />
             </Tab>
