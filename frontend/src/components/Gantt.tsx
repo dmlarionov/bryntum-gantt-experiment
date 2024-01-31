@@ -21,9 +21,9 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     // }
     // pan: true,
     timeRanges : {
-        showCurrentTimeLine : true,
+      showCurrentTimeLine : true,
     },
-    // treeGroup: true,
+    treeGroup: true,
     filter: true,
     taskMenu: {
       items: {
