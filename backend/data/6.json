@@ -61,7 +61,8 @@
         "duration": 3,
         "durationUnit": "day",
         "sapToroOrder": "123456",
-        "sapToroOperation": "90328409238032"
+        "sapToroOperation": "90328409238032",
+        "stage": "Planning"
       },
       {
         "id": "01HBRHXPVGBVD4FY2CYWQX84R8",
@@ -69,7 +70,8 @@
         "percentDone": 0,
         "duration": 3,
         "durationUnit": "day",
-        "sapToroOrder": "123456"
+        "sapToroOrder": "123456",
+        "stage": "Execution"
       },
       {
         "id": "01HBRHYBD6FHRS1S1GVT96TNDJ",

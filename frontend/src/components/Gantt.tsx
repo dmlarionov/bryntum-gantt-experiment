@@ -48,22 +48,43 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     },
     taskEdit: {
       items: {
+        generalTab: {
+          items: {
+            stage: {
+              // TODO: Задать ширину в Task Editor-е
+              type: 'combo',
+              label: 'Этап',
+              items: [
+                { value: 'Planning', text: 'Планирование' },
+                { value: 'Preparation', text: 'Подготовка' },
+                { value: 'Execution', text: 'Проведение' },
+                { value: 'Analysis', text: 'Анализ' }
+              ],
+              name: 'stage'
+            }
+          }
+        },
         sapTab: {
           title  : 'SAP',
           weight : 450, // before Advanced tab, see https://bryntum.com/products/gantt/docs/guide/Gantt/customization/taskedit#customizing-the-tabs-and-the-fields
-          items  : {
-            sapToroOrder: {
+          items: {
+            // TODO: Выбор ТОРО заказа и операции из двух-уровневого списка, подгружаемого из бэкенда по мере набора текста.
+            sapToroOrderOperation: {
               type: 'textfield',
-              weight: 10,
               label: 'Заказ SAP ТОРО',
               // Name of the field matches data field name, so value is loaded/saved automatically.
               name: 'sapToroOrder'
             },
             sapToroOperation: {
               type: 'textfield',
-              weight: 20,
               label: 'Операция SAP ТОРО',
               name: 'sapToroOperation'
+            },
+            greenButton: {
+              type: 'button',
+              text: 'Кнопень',
+              color: 'b-green',
+              onClick: () => {}
             }
           }
         }
@@ -72,8 +93,9 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
   }
   const columns: Partial<GridColumnConfig>[] = [
     { type: 'name', field: 'name', text: 'Наименование', width: 250 },
-    { type: 'column', field: 'sapToroOrder', text: 'Заказ SAP TORO', width: 250 },
-    { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250 },
+    { type: 'column', field: 'stage', text: 'Этап', width: 250 }, // TODO: Названия этапов на русском вместо мнемоник, не сломав групиировку дерева
+    { type: 'column', field: 'sapToroOrder', text: 'Заказ SAP TORO', width: 250, hidden: true },
+    { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250, hidden: true },
   ]
 
   return (
