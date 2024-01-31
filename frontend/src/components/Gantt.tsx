@@ -45,6 +45,30 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
           }
         }
       }
+    },
+    taskEdit: {
+      items: {
+        sapTab: {
+          title  : 'SAP',
+          weight : 450, // before Advanced tab, see https://bryntum.com/products/gantt/docs/guide/Gantt/customization/taskedit#customizing-the-tabs-and-the-fields
+          items  : {
+            sapToroOrder: {
+              type: 'textfield',
+              weight: 10,
+              label: 'Заказ SAP ТОРО',
+              // Name of the field matches data field name, so value is loaded/saved automatically.
+              // In this case it is equal to the Task "name" field.
+              name: 'sapToroOrder'
+            },
+            sapToroOperation: {
+              type: 'textfield',
+              weight: 20,
+              label: 'Операция SAP ТОРО',
+              name: 'sapToroOperation'
+            }
+          }
+        }
+      }
     }
   }
   const columns: Partial<GridColumnConfig>[] = [
