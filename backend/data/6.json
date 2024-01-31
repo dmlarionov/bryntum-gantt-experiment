@@ -60,14 +60,16 @@
         "percentDone": 50,
         "duration": 3,
         "durationUnit": "day",
-        "sapToroNumber": "123456/0987"
+        "sapToroOrder": "123456",
+        "sapToroOperation": "90328409238032"
       },
       {
         "id": "01HBRHXPVGBVD4FY2CYWQX84R8",
         "name": "Ремонт",
         "percentDone": 0,
         "duration": 3,
-        "durationUnit": "day"
+        "durationUnit": "day",
+        "sapToroOrder": "123456"
       },
       {
         "id": "01HBRHYBD6FHRS1S1GVT96TNDJ",

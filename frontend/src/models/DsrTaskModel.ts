@@ -1,9 +1,10 @@
-import { TaskModel } from "@bryntum/gantt";
+import { ModelFieldConfig, TaskModel } from "@bryntum/gantt";
 
 export class DsrTaskModel extends TaskModel {
-  static get fields() {
+  static get fields(): Partial<ModelFieldConfig>[] {
     return [
-      { name: 'Заказ / Операция SAP TORO', column: 'sapToroNumber', type: 'string' }
+      { name: 'Заказ SAP TORO', dataSource: 'sapToroOrder' },
+      { name: 'Операция SAP TORO', dataSource: 'sapToroOperation' }
     ]
   }
 }
