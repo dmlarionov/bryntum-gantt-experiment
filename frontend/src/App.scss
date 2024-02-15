@@ -22,3 +22,7 @@
 //     // flex: 1 1 100%;
 //     height: 85%;
 // }
+
+// Showing errors in webpack overlay during development disabled (for demo purpose)
+// (check https://stackoverflow.com/questions/76187282/react-resizeobserver-loop-completed-with-undelivered-notifications)
+iframe#webpack-dev-server-client-overlay{display:none!important}
