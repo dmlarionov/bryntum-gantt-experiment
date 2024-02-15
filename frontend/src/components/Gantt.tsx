@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useRef } from "react";
 import { BryntumGantt, BryntumGanttProps } from "@bryntum/gantt-react";
-import { ContainerItemConfig, GanttFeaturesConfigType, GridColumnConfig } from "@bryntum/gantt";
+import { ContainerItemConfig, GanttFeaturesConfigType, GridColumnConfig, StringHelper } from "@bryntum/gantt";
 import { ExtendedTaskModel } from '../models/ExtendedTaskModel';
 
 const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = (props) => {
@@ -23,7 +23,14 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     timeRanges : {
       showCurrentTimeLine : true,
     },
-    treeGroup: true,
+    tree: true,
+    treeGroup: {
+      hideGroupedColumns: true,
+      parentRenderer({ field, value, column, record }) {
+          // For generated group parent, prefix with the grouped column text
+          return StringHelper.xss`<div>${column.text}: ${value}</div>`;
+      }
+    },
     filter: true,
     taskMenu: {
       items: {
