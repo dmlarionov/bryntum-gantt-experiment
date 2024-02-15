@@ -1,0 +1,286 @@
+{
+  "project": {
+    "calendar": "general",
+    "startDate": "2023-10-16T00:00:00+05:00",
+    "hoursPerDay": 24,
+    "daysPerWeek": 5,
+    "daysPerMonth": 20,
+    "timeZone": "Asia/Yekaterinburg"
+  },
+  "calendars": {
+    "rows": [
+      {
+        "id": "general",
+        "name": "General",
+        "intervals": [
+          {
+            "recurrentStartDate": "on Sat at 0:00",
+            "recurrentEndDate": "on Mon at 0:00",
+            "isWorking": false
+          }
+        ],
+        "expanded": true,
+        "children": [
+          {
+            "id": "business",
+            "name": "Business",
+            "intervals": [
+              {
+                "recurrentStartDate": "every weekday at 12:00",
+                "recurrentEndDate": "every weekday at 13:00",
+                "isWorking": false
+              },
+              {
+                "recurrentStartDate": "every weekday at 17:00",
+                "recurrentEndDate": "every weekday at 08:00",
+                "isWorking": false
+              }
+            ]
+          },
+          {
+            "id": "night",
+            "name": "Night shift",
+            "intervals": [
+              {
+                "recurrentStartDate": "every weekday at 6:00",
+                "recurrentEndDate": "every weekday at 22:00",
+                "isWorking": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tasks": {
+    "rows": [
+      {
+        "id": 1,
+        "name": "Операции останова",
+        "rollup": true,
+        "expanded": true,
+        "children": [
+          {
+            "id": 2,
+            "name": "XXX",
+            "percentDone": 50,
+            "duration": 3,
+            "durationUnit": "day",
+            "category": "1 – Stop"
+          },
+          {
+            "id": 3,
+            "name": "YYY",
+            "duration": 11,
+            "durationUnit": "hour",
+            "category": "1 – Stop"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Операции ремонта",
+        "percentDone": 0,
+        "durationUnit": "day",
+        "rollup": true,
+        "expanded": true,
+        "children": [
+          {
+            "id": 5,
+            "name": "Сито вибрационное SUZ 1600X3000",
+            "sapToroOrder": "310003325508",
+            "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+            "sapEquipment": "1000551554",
+            "rollup": true,
+            "expanded": false,
+            "category": "2 – Critical",
+            "children": [
+              {
+                "id": 6,
+                "name": "Проверка креплений и затяжка болтов",
+                "sapToroOrder": "310003325508",
+                "sapToroOperation": "0010",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000551554",
+                "duration": 3,
+                "durationUnit": "hour",
+                "category": "2 – Critical"
+              },
+              {
+                "id": 7,
+                "name": "Проверка полотен вибросита",
+                "sapToroOrder": "310003325508",
+                "sapToroOperation": "0020",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000551554",
+                "duration": 6,
+                "durationUnit": "hour",
+                "category": "2 – Critical"
+              },
+              {
+                "id": 8,
+                "name": "Проверка резиновых буферов",
+                "sapToroOrder": "310003325508",
+                "sapToroOperation": "0030",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000551554",
+                "duration": 5,
+                "durationUnit": "hour",
+                "category": "2 – Critical"
+              },
+              {
+                "id": 9,
+                "name": "Проверка патрубков",
+                "sapToroOrder": "310003325508",
+                "sapToroOperation": "0040",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000551554",
+                "duration": 8,
+                "durationUnit": "hour",
+                "category": "2 – Critical"
+              },
+              {
+                "id": 10,
+                "name": "Замена крышек TPE",
+                "sapToroOrder": "310003325508",
+                "sapToroOperation": "0050",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000551554",
+                "duration": 3,
+                "durationUnit": "hour",
+                "category": "2 – Critical"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "name": "Электродвигатель 40-SEM-6007-BU",
+            "sapToroOrder": "310003325509",
+            "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+            "sapEquipment": "1000561028",
+            "rollup": true,
+            "expanded": false,
+            "category": "3 – Other",
+            "children": [
+              {
+                "id": 12,
+                "name": "Разборка и сборка электродвигателя",
+                "sapToroOrder": "310003325509",
+                "sapToroOperation": "0020",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000561028",
+                "duration": 15,
+                "durationUnit": "hour",
+                "category": "3 – Other"
+              },
+              {
+                "id": 13,
+                "name": "Замена подшипников",
+                "sapToroOrder": "310003325509",
+                "sapToroOperation": "0030",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000561028",
+                "duration": 7,
+                "durationUnit": "hour",
+                "category": "3 – Other"
+              },
+              {
+                "id": 14,
+                "name": "Промывка, продувка узлов и деталей",
+                "sapToroOrder": "310003325509",
+                "sapToroOperation": "0040",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000561028",
+                "duration": 5,
+                "durationUnit": "hour",
+                "category": "3 – Other"
+              },
+              {
+                "id": 15,
+                "name": "Испытания электродвигателя",
+                "sapToroOrder": "310003325509",
+                "sapToroOperation": "0050",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000561028",
+                "duration": 30,
+                "durationUnit": "hour",
+                "category": "3 – Other"
+              },
+              {
+                "id": 16,
+                "name": "Проверка работы электродвигателя",
+                "sapToroOrder": "310003325509",
+                "sapToroOperation": "0060",
+                "sapTechPlace": "1120-14-4040-4041-SY04-FI2J",
+                "sapEquipment": "1000561028",
+                "duration": 3,
+                "durationUnit": "hour",
+                "category": "3 – Other"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Операции пуска",
+        "rollup": true,
+        "expanded": true,
+        "children": [
+          {
+            "id": "ZEAME9",
+            "name": "ZZZ",
+            "duration": 2,
+            "durationUnit": "day",
+            "category": "4 – Start"
+          }
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "rows": [
+      {
+        "id": 1,
+        "fromTask": 1,
+        "toTask": 4
+      },
+      {
+        "id": 2,
+        "fromTask": 4,
+        "toTask": 17
+      },
+      {
+        "id": 3,
+        "fromTask": 2,
+        "toTask": 3
+      }
+    ]
+  },
+  "resources": {
+    "rows": [
+      {
+        "id": 1,
+        "name": "Иванов И.И."
+      },
+      {
+        "id": 2,
+        "name": "Петров П.С."
+      },
+      {
+        "id": 3,
+        "name": "Сидоров С.В."
+      }
+    ]
+  },
+  "assignments": {
+    "rows": [
+      {
+        "id": 1,
+        "event": 1,
+        "resource": 1,
+        "units": 75.25
+      }
+    ]
+  }
+}

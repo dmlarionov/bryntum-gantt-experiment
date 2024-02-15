@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useRef } from "react";
 import { BryntumGantt, BryntumGanttProps } from "@bryntum/gantt-react";
-import { GanttFeaturesConfigType, GridColumnConfig } from "@bryntum/gantt";
-import { DsrTaskModel } from '../models/DsrTaskModel';
+import { ContainerItemConfig, GanttFeaturesConfigType, GridColumnConfig } from "@bryntum/gantt";
+import { ExtendedTaskModel } from '../models/ExtendedTaskModel';
 
 const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = (props) => {
   const ref = useRef<BryntumGantt>(null);
@@ -33,7 +33,7 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
           icon: 'b-fa b-fa-forward',
           weight : 90, // Add the item to the top
           onItem: (event) => {
-            (event.record as DsrTaskModel).shift('day', 1);
+            (event.record as ExtendedTaskModel).shift('day', 1);
           }
         },
         moveOneDayBackward : {
@@ -41,7 +41,7 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
           icon: 'b-fa b-fa-backward',
           weight : 95, // Add the item to the top
           onItem: (event) => {
-            (event.record as DsrTaskModel).shift('day', -1);
+            (event.record as ExtendedTaskModel).shift('day', -1);
           }
         }
       }
@@ -93,16 +93,52 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
   }
   const columns: Partial<GridColumnConfig>[] = [
     { type: 'name', field: 'name', text: 'Наименование', width: 250 },
-    { type: 'column', field: 'stage', text: 'Этап', width: 250 }, // TODO: Названия этапов на русском вместо мнемоник, не сломав групиировку дерева
     { type: 'column', field: 'sapToroOrder', text: 'Заказ SAP TORO', width: 250, hidden: true },
     { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250, hidden: true },
+    { type: 'column', field: 'sapTechPlace', text: 'Тех. место SAP', width: 250, hidden: true },
+    { type: 'column', field: 'sapEquipment', text: 'ЕО SAP', width: 250, hidden: true },
+    { type: 'column', field: 'category', text: 'Категория работ', width: 250, hidden: true }
   ]
+  const tbar: Partial<ContainerItemConfig>[] = [
+    {
+      type        : 'buttongroup',
+      toggleGroup : true,
+      items: [
+        {
+          text : 'none',
+          pressed : true,
+          onToggle({ pressed }) {
+            pressed && ref.current?.instance.clearGroups();
+          }
+        },
+        {
+          text    : 'Заказ SAP TORO',
+          onToggle({ pressed }) {
+            pressed && ref.current?.instance.group(['sapToroOrder']);
+          }
+        },
+        {
+          text : 'Категория работ',
+          onToggle({ pressed }) {
+            pressed && ref.current?.instance.group(['category']);
+          }
+        },
+        {
+          text : 'Категория + Заказ',
+          onToggle({ pressed }) {
+            pressed && ref.current?.instance.group(['category', 'sapToroOrder']);
+          }
+        }
+      ]
+    }
+]
 
   return (
     <BryntumGantt
       ref={ref}
       features={features}
       columns={columns}
+      tbar={tbar}
       {...props}
       // listeners={{
       //     taskclick: () => { alert ("task click!") }
