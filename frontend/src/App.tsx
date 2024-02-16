@@ -52,7 +52,7 @@ const App: FunctionComponent = () => {
         </Row>
         <Row className='p-2'>
           <Tabs defaultActiveKey="gantt" id="tabs" className="mb-3">
-            <Tab eventKey="gantt" title="Гант">
+            <Tab eventKey="gantt" title="КСГ">
               <Gantt
                 // height={bryntumHeight}
                 autoHeight={true}
