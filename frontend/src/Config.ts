@@ -4,6 +4,13 @@
 import { ProjectModelConfig } from '@bryntum/gantt';
 import { ExtendedTaskModel } from './models/ExtendedTaskModel';
 
+const categoryTextMap = new Map<string, string>([
+  ['1', 'Операции останова'],
+  ['2', 'Операции ремонта (критические работы)'],
+  ['3', 'Операции ремонта (прочие работы)'],
+  ['4', 'Операции запуска']
+]);
+
 const projectModelConfig: Partial<ProjectModelConfig> = {
   transport : {
     load : {
@@ -23,4 +30,4 @@ const projectModelConfig: Partial<ProjectModelConfig> = {
   taskModelClass: ExtendedTaskModel
 };
 
-export { projectModelConfig };
+export { projectModelConfig, categoryTextMap };

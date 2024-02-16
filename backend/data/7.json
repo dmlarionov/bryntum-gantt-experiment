@@ -66,14 +66,14 @@
             "percentDone": 50,
             "duration": 3,
             "durationUnit": "day",
-            "category": "1 – Stop"
+            "category": "1"
           },
           {
             "id": 3,
             "name": "YYY",
             "duration": 11,
             "durationUnit": "hour",
-            "category": "1 – Stop"
+            "category": "1"
           }
         ]
       },
@@ -93,7 +93,7 @@
             "sapEquipment": "1000551554",
             "rollup": true,
             "expanded": false,
-            "category": "2 – Critical",
+            "category": "2",
             "children": [
               {
                 "id": 6,
@@ -104,7 +104,7 @@
                 "sapEquipment": "1000551554",
                 "duration": 3,
                 "durationUnit": "hour",
-                "category": "2 – Critical"
+                "category": "2"
               },
               {
                 "id": 7,
@@ -115,7 +115,7 @@
                 "sapEquipment": "1000551554",
                 "duration": 6,
                 "durationUnit": "hour",
-                "category": "2 – Critical"
+                "category": "2"
               },
               {
                 "id": 8,
@@ -126,7 +126,7 @@
                 "sapEquipment": "1000551554",
                 "duration": 5,
                 "durationUnit": "hour",
-                "category": "2 – Critical"
+                "category": "2"
               },
               {
                 "id": 9,
@@ -137,7 +137,7 @@
                 "sapEquipment": "1000551554",
                 "duration": 8,
                 "durationUnit": "hour",
-                "category": "2 – Critical"
+                "category": "2"
               },
               {
                 "id": 10,
@@ -148,7 +148,7 @@
                 "sapEquipment": "1000551554",
                 "duration": 3,
                 "durationUnit": "hour",
-                "category": "2 – Critical"
+                "category": "2"
               }
             ]
           },
@@ -160,7 +160,7 @@
             "sapEquipment": "1000561028",
             "rollup": true,
             "expanded": false,
-            "category": "3 – Other",
+            "category": "3",
             "children": [
               {
                 "id": 12,
@@ -171,7 +171,7 @@
                 "sapEquipment": "1000561028",
                 "duration": 15,
                 "durationUnit": "hour",
-                "category": "3 – Other"
+                "category": "3"
               },
               {
                 "id": 13,
@@ -182,7 +182,7 @@
                 "sapEquipment": "1000561028",
                 "duration": 7,
                 "durationUnit": "hour",
-                "category": "3 – Other"
+                "category": "3"
               },
               {
                 "id": 14,
@@ -193,7 +193,7 @@
                 "sapEquipment": "1000561028",
                 "duration": 5,
                 "durationUnit": "hour",
-                "category": "3 – Other"
+                "category": "3"
               },
               {
                 "id": 15,
@@ -204,7 +204,7 @@
                 "sapEquipment": "1000561028",
                 "duration": 30,
                 "durationUnit": "hour",
-                "category": "3 – Other"
+                "category": "3"
               },
               {
                 "id": 16,
@@ -215,7 +215,7 @@
                 "sapEquipment": "1000561028",
                 "duration": 3,
                 "durationUnit": "hour",
-                "category": "3 – Other"
+                "category": "3"
               }
             ]
           }
@@ -232,7 +232,7 @@
             "name": "ZZZ",
             "duration": 2,
             "durationUnit": "day",
-            "category": "4 – Start"
+            "category": "4"
           }
         ]
       }

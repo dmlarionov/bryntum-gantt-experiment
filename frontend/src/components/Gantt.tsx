@@ -1,7 +1,8 @@
 import React, { FunctionComponent, useRef } from "react";
 import { BryntumGantt, BryntumGanttProps } from "@bryntum/gantt-react";
-import { ContainerItemConfig, GanttFeaturesConfigType, GridColumnConfig, StringHelper } from "@bryntum/gantt";
+import { ContainerItemConfig, GanttFeaturesConfigType, GridColumnConfig } from "@bryntum/gantt";
 import { ExtendedTaskModel } from '../models/ExtendedTaskModel';
+import { categoryTextMap } from "../Config";
 
 const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = (props) => {
   const ref = useRef<BryntumGantt>(null);
@@ -25,10 +26,16 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     },
     tree: true,
     treeGroup: {
-      hideGroupedColumns: true,
+      // hideGroupedColumns: true,
       parentRenderer({ field, value, column, record }) {
-          // For generated group parent, prefix with the grouped column text
-          return StringHelper.xss`<div>${column.text}: ${value}</div>`;
+        // console.log(record.id);
+        let v: string = value.toString();
+        // // The category field uses dictionary for a value
+        // if (column.field === 'category') {
+        //   v = categoryTextMap.get(value) ?? value;
+        // }
+        // For generated group parent, prefix with the grouped column text
+        return `${column.text}: ${v}`;
       }
     },
     filter: true,
@@ -104,7 +111,14 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
     { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250, hidden: true },
     { type: 'column', field: 'sapTechPlace', text: 'Тех. место SAP', width: 250, hidden: true },
     { type: 'column', field: 'sapEquipment', text: 'ЕО SAP', width: 250, hidden: true },
-    { type: 'column', field: 'category', text: 'Категория работ', width: 250, hidden: true }
+    {
+      type     : 'template',
+      field    : 'category',
+      text     : 'Категория работ',
+      width    : 250,
+      template: ({ value }) => `${categoryTextMap.get(value) || 'Не указано'}`,
+      hidden   : true
+  }
   ]
   const tbar: Partial<ContainerItemConfig>[] = [
     {

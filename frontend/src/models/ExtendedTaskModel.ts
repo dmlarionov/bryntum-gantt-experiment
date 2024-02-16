@@ -7,7 +7,7 @@ export class ExtendedTaskModel extends TaskModel {
       { type: 'string', name: 'sapToroOperation', dataSource: 'sapToroOperation', defaultValue: 'Не указано' },
       { type: 'string', name: 'sapTechPlace', dataSource: 'sapTechPlace', defaultValue: 'Не указано' },
       { type: 'string', name: 'sapEquipment', dataSource: 'sapEquipment', defaultValue: 'Не указано' },
-      { type: 'string', name: 'category', dataSource: 'category', defaultValue: 'Не указано' },
+      { type: 'string', name: 'category', dataSource: 'category' },
     ]
   }
 }
