@@ -113,7 +113,7 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
       text: 'Заказ SAP TORO',
       width: 250,
       // THIS IS WORKAROUND FOR THE BUG https://github.com/bryntum/support/issues/8466
-      renderer: ({ value }) => value === '--' ? 'Не указано' : value,
+      renderer: ({ value }) => value === '--' ? 'Отсутствует' : value,
       hidden: true
     },
     { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250, hidden: true },
