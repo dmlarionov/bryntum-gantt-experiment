@@ -59,6 +59,8 @@
         "name": "Операции останова",
         "rollup": true,
         "expanded": true,
+        "sapToroOrder": "--",
+        "category": "1",
         "children": [
           {
             "id": 2,
@@ -66,6 +68,7 @@
             "percentDone": 50,
             "duration": 3,
             "durationUnit": "day",
+            "sapToroOrder": "--",
             "category": "1"
           },
           {
@@ -73,6 +76,7 @@
             "name": "YYY",
             "duration": 11,
             "durationUnit": "hour",
+            "sapToroOrder": "--",
             "category": "1"
           }
         ]
@@ -84,6 +88,8 @@
         "durationUnit": "day",
         "rollup": true,
         "expanded": true,
+        "sapToroOrder": "--",
+        "category": "2",
         "children": [
           {
             "id": 5,
@@ -226,12 +232,15 @@
         "name": "Операции пуска",
         "rollup": true,
         "expanded": true,
+        "sapToroOrder": "--",
+        "category": "4",
         "children": [
           {
             "id": "ZEAME9",
             "name": "ZZZ",
             "duration": 2,
             "durationUnit": "day",
+            "sapToroOrder": "--",
             "category": "4"
           }
         ]

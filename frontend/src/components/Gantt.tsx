@@ -107,7 +107,15 @@ const Gantt: FunctionComponent<Omit<BryntumGanttProps, "features"|"columns">> = 
   }
   const columns: Partial<GridColumnConfig>[] = [
     { type: 'name', field: 'name', text: 'Наименование', width: 250 },
-    { type: 'column', field: 'sapToroOrder', text: 'Заказ SAP TORO', width: 250, hidden: true },
+    {
+      type: 'column',
+      field: 'sapToroOrder',
+      text: 'Заказ SAP TORO',
+      width: 250,
+      // THIS IS WORKAROUND FOR THE BUG https://github.com/bryntum/support/issues/8466
+      renderer: ({ value }) => value === '--' ? 'Не указано' : value,
+      hidden: true
+    },
     { type: 'column', field: 'sapToroOperation', text: 'Операция SAP TORO', width: 250, hidden: true },
     { type: 'column', field: 'sapTechPlace', text: 'Тех. место SAP', width: 250, hidden: true },
     { type: 'column', field: 'sapEquipment', text: 'ЕО SAP', width: 250, hidden: true },

@@ -5,6 +5,7 @@ import { ProjectModelConfig } from '@bryntum/gantt';
 import { ExtendedTaskModel } from './models/ExtendedTaskModel';
 
 const categoryTextMap = new Map<string, string>([
+  ['0', 'Не указано'],
   ['1', 'Операции останова'],
   ['2', 'Операции ремонта (критические работы)'],
   ['3', 'Операции ремонта (прочие работы)'],
